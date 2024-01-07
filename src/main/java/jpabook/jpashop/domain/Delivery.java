@@ -13,7 +13,7 @@ public class Delivery {
     @GeneratedValue
     @Column(name = "delivery_id")
     private Long id;
-    @OneToOne()
+    @OneToOne(fetch = FetchType.LAZY)
     private Orders orders;
 
     @Embedded

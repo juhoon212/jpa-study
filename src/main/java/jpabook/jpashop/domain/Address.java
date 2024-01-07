@@ -14,4 +14,14 @@ public class Address {
     private String city;
     private String street;
     private String zipcode;
+
+    // 함부로 객체 생성 x , JPA 스펙 상 해놓은것
+    protected Address() {
+    }
+
+    public Address(String city, String street, String zipcode) {
+        this.city = city;
+        this.street = street;
+        this.zipcode = zipcode;
+    }
 }
